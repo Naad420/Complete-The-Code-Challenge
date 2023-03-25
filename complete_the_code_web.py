@@ -163,6 +163,7 @@ class Game:
                     st.write(f"Correct {CORRECT_EMOJI}: " + str(answers))
                 else:
                     st.write(f"Wrong {WRONG_EMOJI}: " + str(answers))
+                    st.write("Expected: ")
                     st.code(self.code, language='c')
             
                 # Restart Button
