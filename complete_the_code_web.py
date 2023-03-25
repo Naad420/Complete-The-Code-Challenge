@@ -129,6 +129,8 @@ code_snippets = {
 PAGE_TITLE = "Complete the Code"
 PAGE_ICON = ":fire:"
 layout = 'centered'
+CORRECT_EMOJI = ':sunglasses:'
+WRONG_EMOJI = ':joy:'
 #------------config-------------
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=layout)
 st.title("</> Complete_the_code </>")
@@ -158,9 +160,9 @@ class Game:
                 self.code = self.code.replace("____", answer, 1)
             with st.form(key="my_form2", clear_on_submit=True):
                 if answers == self.answers[0]:
-                    st.write("Correct" + str(answers))
+                    st.write(f"Correct {CORRECT_EMOJI}: " + str(answers))
                 else:
-                    st.write("Wrong" + str(answers))
+                    st.write(f"Wrong {WRONG_EMOJI}: " + str(answers))
                     st.code(self.code, language='c')
             
                 # Restart Button
