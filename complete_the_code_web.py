@@ -4,10 +4,10 @@ import random
 
 #-------------data--------------
 code_snippets = {
-    "snippet1": {
-        "code": "#include <stdio.h>\n\nint main() {\n    int n;\n    printf(\"Enter the size of the matrix: \");\n    scanf(\"%d\", &[BLANK]);\n    int matrix[n][n];\n    printf(\"Enter the matrix elements:\\n\");\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < n; j++) {\n            scanf(\"%d\", &[BLANK]);\n            matrix[i][j] = [BLANK];\n        }\n    }\n    printf(\"The matrix is:\\n\");\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < n; j++) {\n            printf(\"%d \", matrix[i][j]);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
-        "answer": ["n", "num"]
-    },
+    # "snippet1": {
+    #     "code": "#include <stdio.h>\n\nint main() {\n    int n;\n    printf(\"Enter the size of the matrix: \");\n    scanf(\"%d\", &[BLANK]);\n    int matrix[n][n];\n    printf(\"Enter the matrix elements:\\n\");\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < n; j++) {\n            scanf(\"%d\", &[BLANK]);\n            matrix[i][j] = [BLANK];\n        }\n    }\n    printf(\"The matrix is:\\n\");\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < n; j++) {\n            printf(\"%d \", matrix[i][j]);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}",
+    #     "answer": ["n", "num"]
+    # },
     "snippet2": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int [BLANK];\n ptr = #\n\n printf('The value of num is: %d', *ptr);\n\n return 0;\n}",
         "answer": ["*ptr"]
@@ -132,44 +132,45 @@ layout = 'centered'
 CORRECT_EMOJI = ':sunglasses:'
 WRONG_EMOJI = ':joy:'
 #------------config-------------
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=layout)
-st.title("</> Complete_the_code </>")
 
 class Game:
     def __init__(self):
+        st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=layout)
+        st.title("MUJ IEEE CS: BATTLESHIP :collision:")
+        st.title("</> Complete_the_code </>")
         snippet = random.choice(list(code_snippets.values()))
         self.code: str = snippet["code"]
         self.answers = snippet["answer"]
-        
+
     def display(self):
         for answer in self.answers:
             self.code = self.code.replace("[BLANK]", "____")
         with st.form (key="my_form1", clear_on_submit=True):
-            st.code(self.code, language='c')
+            col1 = st.code(self.code, language='c')
             text_input = st.text_input(label="Enter Code for Blank")
             submit_button = st.form_submit_button(label="Submit")
-        
+
         if submit_button:
             return text_input
-        
+
     def play(self):
         answers = self.display()
         
         if answers != None:
             for answer in self.answers:
-                self.code = self.code.replace("____", answer, 1)
+                self.code = self.code.replace("____", answer)
             with st.form(key="my_form2", clear_on_submit=True):
+                st.write(answers)
                 if answers == self.answers[0]:
                     st.write(f"Correct {CORRECT_EMOJI}: " + str(answers))
                 else:
                     st.write(f"Wrong {WRONG_EMOJI}: " + str(answers))
                     st.write("Expected: ")
-                    st.code(self.code, language='c')
-            
+                    col2 = st.code(self.code, language='c')
+
                 # Restart Button
                 replay_button = st.form_submit_button(label="Restart")
                 if replay_button:
                     self.play()
-            
 
 Game().play()
