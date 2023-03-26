@@ -30,7 +30,7 @@ if submit_button:
         st.write(f"Wrong {WRONG_EMOJI}: " + str(user_text_input))
         st.write("Expected: " + key)
 
-    user_text_input = st.text_input(label="Enter Code for Blank", key="#t1", value=" ")
+#     user_text_input = st.text_input(label="Enter Code for Blank", key="#t1", value=" ")
 
 
 
