@@ -29,9 +29,8 @@ if submit_button:
     else:
         st.write(f"Wrong {WRONG_EMOJI}: " + str(user_text_input))
         st.write("Expected: " + key)
-        col2 = st.code(code.replace("____", key), language='c')
 
-    user_text_input = st.text_input(label="Enter Code for Blank", key="#t1", value="")
+    user_text_input = st.text_input(label="Enter Code for Blank", key="#t1", value=" ")
 
 
 
