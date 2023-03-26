@@ -17,20 +17,15 @@ st.title("MUJ IEEE CS: BATTLESHIP :collision:")
 st.title("</> Complete_the_code </>")
 #-------------------------------
 #-------------------------------
-code.replace(key, "____", 1) # only replacing first occurance
+code = code.replace(key, "____", 1) # only replacing first occurance
 #-------------------------------
-col1 = st.code(code, language='c')
+st.code(code, language='c')
 submit_button = st.button("Submit")
 user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
 #-------------------------------
 if submit_button:
     if user_text_input == key:
         st.write(f"Correct {CORRECT_EMOJI}: " + str(user_text_input))
-        restart_button = st.button("Restart")
-        if restart_button:
-            code, key = data.fetch_random_snippet()
-            code.replace(key, "____", 1)
-            col1 = st.code(code, language='c')
     else:
         st.write(f"Wrong {WRONG_EMOJI}: " + str(user_text_input))
         st.write("Expected: " + key)
