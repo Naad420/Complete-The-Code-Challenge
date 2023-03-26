@@ -9,167 +9,157 @@ code_snippets = {
     # },
     "snippet2": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int [BLANK];\n ptr = #\n\n printf('The value of num is: %d', *ptr);\n\n return 0;\n}",
-        "answer": ["*ptr"]
+        "answer": "*ptr"
     },
     "snippet3": {
         "code": "#include <stdio.h>\n\nint main() {\n int i = 0;\n [BLANK] (i < 5) {\n printf(''%d '', i);\n i++;\n }\n\n return 0;\n}",
-        "answer": ["while"]
+        "answer": "while"
     },
     "snippet4": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int [BLANK] = #\n\n printf('The address of num is: %p', ptr);\n\n return 0;\n}",
-        "answer": ["*ptr"]
+        "answer": "*ptr"
     },
     "snippet5": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int sum = 0;\n for (int i = 0; i < n; i++) {\n sum += arr[i];\n }\n printf('The sum of the array is: %d', sum);\n return 0;\n}",
-        "answer": ["sum"]
+        "answer": "sum"
     },
     "snippet6": {
         "code": "#include <stdio.h>\n\nint main() {\n int num1 = 5, num2 = 10;\n int [BLANK] = &num1;\n *ptr = 15;\n\n printf('The value of num1 is: %d', num1);\n\n return 0;\n}",
-        "answer": ["*ptr"]
+        "answer": "*ptr"
     },
     "snippet7": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int [BLANK];\n for (int i = 0; i < n; i++) {\n rev_arr[i] = arr[n - i - 1];\n }\n return 0;\n}",
-        "answer": ["rev_arr"]
+        "answer": "rev_arr"
     },
     "snippet8": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int *ptr = #\n printf('The value of num is: %d', [BLANK]);\n return 0;\n}",
-        "answer": ["*ptr"]
+        "answer": "*ptr"
     },
     "snippet9": {
         "code": "#include <stdio.h>\n\nint main() {\n int num1 = 5, num2 = 10;\n int [BLANK];\n if (num1 > num2) {\n max = num1;\n } else {\n max = num2;\n }\n printf('The maximum number is: %d', max);\n return 0;\n}",
-        "answer": ["max"]
+        "answer": "max"
     },
     "snippet10": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int [BLANK];\n for (int i = 0; i < n; i++) {\n new_arr[i] = arr[i] * 2;\n }\n return 0;\n}",
-        "answer": ["new_arr"]
+        "answer": "new_arr"
     },
     "snippet11": {
         "code": "#include <stdio.h>\n\nint main() {\n int i = 0;\n [BLANK] (i <= 10) {\n printf('%d ', i);\n i += 2;\n }\n\n return 0;\n}",
-        "answer": ["while"]
+        "answer": "while"
     },
     "snippet12": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int [BLANK] = #\n *ptr += 5;\n\n printf('The value of num is: %d', num);\n\n return 0;\n}",
-        "answer": ["*ptr"]
+        "answer": "*ptr"
     },
     "snippet13": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int max = arr[0];\n for (int i = 1; i < n; i++) {\n if (arr[i] > max) {\n max = arr[i];\n }\n }\n printf('The maximum element in the array is: %d', max);\n return 0;\n}",
-        "answer": ["max"]
+        "answer": "max"
     },
     "snippet14": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int [BLANK] = #\n *ptr -= 3;\n\n printf('The value of num is: %d', num);\n\n return 0;\n}",
-        "answer": ["*ptr"]
+        "answer": "*ptr"
     },
     "snippet15": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int *ptr = #\n printf('The address of num is: %p', [BLANK]);\n return 0;\n}",
-        "answer": ["ptr"]
+        "answer": "ptr"
     },
     "snippet16": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int [BLANK];\n for (int i = 0; i < n; i++) {\n even_arr[i] = arr[i] % 2 == 0 ? arr[i] : 0;\n }\n return 0;\n}",
-        "answer": ["even_arr"]
+        "answer": "even_arr"
     },
     "snippet17": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 5;\n int [BLANK] = num;\n printf('The value of num is: %d', *ptr);\n return 0;\n}",
-        "answer": ["*ptr"]
+        "answer": "*ptr"
     },
     "snippet18": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int sum = 0;\n for (int i = 0; i < n; i++) {\n sum += arr[i];\n }\n int [BLANK] = sum / n;\n printf('The average of the elements in the array is: %d', average);\n return 0;\n}",
-    "answer": ["average"]
+    "answer": "average"
     },
     "snippet19": {
         "code": "#include <stdio.h>\n\nint main() {\n int num1 = 10, num2 = 5;\n int [BLANK] = num1 - num2;\n printf('The result is: %d', result);\n return 0;\n}",
-        "answer": ["result"]
+        "answer": "result"
     },
     "snippet20": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int [BLANK];\n for (int i = 0; i < n; i++) {\n reverse_arr[i] = arr[n - i - 1];\n }\n return 0;\n}",
-        "answer": ["reverse_arr"]
+        "answer": "reverse_arr"
     },
     "snippet21": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int [BLANK] = #\n printf('The address of num is: %p', address);\n return 0;\n}",
-        "answer": ["address"]
+        "answer": "address"
     },
     "snippet22": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int max = arr[0];\n int [BLANK] = arr[0];\n for (int i = 1; i < n; i++) {\n if (arr[i] > max) {\n second_max = max;\n max = arr[i];\n }\n }\n printf('The second maximum element in the array is: %d', second_max);\n return 0;\n}",
-        "answer": ["second_max"]
+        "answer": "second_max"
     },
     "snippet23": {
         "code": "#include <stdio.h>\n\nint main() {\n int num1 = 5, num2 = 10;\n int [BLANK] = num1 * num2;\n printf('The product is: %d', product);\n return 0;\n}",
-        "answer": ["product"]
+        "answer": "product"
     },  
     "snippet24": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int [BLANK];\n for (int i = 0; i < 5; i++) {\n ptr[i] = &arr[i];\n }\n printf('The third element of the array is: %d', *ptr[2]);\n return 0;\n}",
-        "answer": ["*ptr[5]"]
+        "answer": "*ptr[5]"
     },
     "snippet25": {
         "code": "#include <stdio.h>\n\nint main() {\n int num1 = 10, num2 = 5;\n int [BLANK] = num1 / num2;\n printf('The quotient is: %d', quotient);\n return 0;\n}",
-        "answer": ["quotient"]
+        "answer": "quotient"
     },
     "snippet26": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int [BLANK] = num;\n printf('The value of num is: %d', *ptr);\n return 0;\n}",
-        "answer": ["*ptr"]
+        "answer": "*ptr"
     },
     "snippet27": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int [BLANK];\n for (int i = 0; i < 5; i++) {\n ptr[i] = &arr[i];\n }\n printf('The sum of the elements in the array is: %d', *ptr[0] + *ptr[1] + *ptr[2] + *ptr[3] + *ptr[4]);\n return 0;\n}",
-        "answer": ["*ptr[5]"]
+        "answer": "*ptr[5]"
     },
     "snippet28": {
         "code": "#include <stdio.h>\n\nint main() {\n int num = 5;\n int [BLANK] = #\n printf('The value of num is: %d', *ptr);\n return 0;\n}",
-        "answer": ["*ptr"]
+        "answer": "*ptr"
     },
     "snippet29": {
         "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int [BLANK];\n for (int i = 0; i < n; i++) {\n if (arr[i] % 2 == 0) {\n even_count++;\n }\n }\n printf('The number of even elements in the array is: %d', even_count);\n return 0;\n}",
-        "answer": ["even_count"]
+        "answer": "even_count"
     },
     "snippet30": {
         "code": "#include <stdio.h>\n\nint main() {\n int num1 = 5, num2 = 10;\n int [BLANK] = num1 + num2;\n printf('The sum is: %d', sum);\n return 0;\n}",
-        "answer": ["sum"]
+        "answer": "sum"
     }
 }
+
 #-----------settings------------
-PAGE_TITLE = "Complete the Code"
+PAGE_TITLE = "</>Complete the Code</>"
 PAGE_ICON = ":fire:"
 layout = 'centered'
 CORRECT_EMOJI = ':sunglasses:'
 WRONG_EMOJI = ':joy:'
 #------------config-------------
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=layout)
+st.title("MUJ IEEE CS: BATTLESHIP :collision:")
+st.title("</> Complete_the_code </>")
+#----------convenience----------
+def replace_with_blank(code):
+    return code.replace("[BLANK]", "____")
+#--------------------------------
+snippet = random.choice(list(code_snippets.values()))
+code = snippet["code"]
+key = snippet["answer"]
+#----------mainloop--------------
+while True:
+    col1 = st.code(code, language='c')
+    text_input = st.text_input(label="Enter Code for Blank")
+    submit_button = st.button("Submit")
 
-class Game:
-    def __init__(self):
-        st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=layout)
-        st.title("MUJ IEEE CS: BATTLESHIP :collision:")
-        st.title("</> Complete_the_code </>")
-        snippet = random.choice(list(code_snippets.values()))
-        self.code: str = snippet["code"]
-        self.answers = snippet["answer"]
-
-    def display(self):
-        for answer in self.answers:
-            self.code = self.code.replace("[BLANK]", "____")
-        with st.form (key="my_form1", clear_on_submit=True):
-            col1 = st.code(self.code, language='c')
-            text_input = st.text_input(label="Enter Code for Blank")
-            submit_button = st.form_submit_button(label="Submit")
-
-        if submit_button:
-            return text_input
-
-    def play(self):
-        answers = self.display()
+    if submit_button:
+        answer = text_input
         
-        if answers != None:
-            for answer in self.answers:
-                self.code = self.code.replace("____", answer)
-            with st.form(key="my_form2", clear_on_submit=True):
-                st.write(answers)
-                if answers == self.answers[0]:
-                    st.write(f"Correct {CORRECT_EMOJI}: " + str(answers))
-                else:
-                    st.write(f"Wrong {WRONG_EMOJI}: " + str(answers))
-                    st.write("Expected: ")
-                    col2 = st.code(self.code, language='c')
-
-                # Restart Button
-                replay_button = st.form_submit_button(label="Restart")
-                if replay_button:
-                    self.play()
-
-Game().play()
+        if answer == key:
+            st.write(f"Correct {CORRECT_EMOJI}: " + str(answer))
+        else:
+            st.write(f"Wrong {WRONG_EMOJI}: " + str(answer))
+            st.write("Expected: ")
+            col2 = st.code(code, language='c')
+            
+        # restart 
+        restart_button = st.button("Restart?")
+        if restart_button:
+            True
+        else: break
