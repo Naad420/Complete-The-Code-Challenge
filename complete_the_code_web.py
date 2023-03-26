@@ -147,10 +147,6 @@ col1 = st.code(code, language='c')
 user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
 submit_button = st.button("Submit")
 
-col1 = st.code(code, language='c')
-user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
-submit_button = st.button("Submit")
-
 if submit_button:
     answer = user_text_input
         
