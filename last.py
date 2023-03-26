@@ -2,9 +2,9 @@ import streamlit as st
 import random
 from code_snippets import Snippets
 
+
 data = Snippets()
 code, key = data.fetch_random_snippet()
-
 #-----------settings------------
 PAGE_TITLE = "</>Complete the Code</>"
 PAGE_ICON = ":fire:"
@@ -15,20 +15,30 @@ WRONG_EMOJI = ':joy:'
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=layout)
 st.title("MUJ IEEE CS: BATTLESHIP :collision:")
 st.title("</> Complete_the_code </>")
-
 #-------------------------------
-code = code.replace(key, "____", 1) # only replacing first occurrence
-
+#-------------------------------
+code = code.replace(key, "____", 1) # only replacing first occurance
 #-------------------------------
 col1 = st.code(code, language='c')
 user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
 submit_button = st.button("Submit")
-
+restart_button = st.button("Restart")
 #-------------------------------
+def get_new_snippet():
+    global code, key
+    code, key = data.fetch_random_snippet()
+    code = code.replace(key, "____", 1)
+
+if restart_button:
+    get_new_snippet()
+
 if submit_button:
     if user_text_input == key:
         st.write(f"Correct {CORRECT_EMOJI}: " + str(user_text_input))
     else:
         st.write(f"Wrong {WRONG_EMOJI}: " + str(user_text_input))
         st.write("Expected: ")
-        st.code(code.replace("____", key), language='c')
+        col2 = st.code(code.replace("____", key), language='c')
+
+if not submit_button:
+    st.write("Enter your answer and click Submit")
