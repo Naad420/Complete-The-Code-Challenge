@@ -29,8 +29,7 @@ if submit_button:
         user_text_input = ""  # reset input
     else:
         st.write(f"Wrong {WRONG_EMOJI}: " + str(user_text_input))
-        st.write("Expected: ")
-        col2 = st.code(code.replace("____", key), language='c')
+        st.write(f"Expected: {key}")
 
 restart_button = st.button("Restart")
 if restart_button:
