@@ -137,7 +137,7 @@ st.title("MUJ IEEE CS: BATTLESHIP :collision:")
 st.title("</> Complete_the_code </>")
 #----------convenience----------
 def replace_with_blank(code):
-    return code.replace("[BLANK]", "____")
+    code = code.replace("[BLANK]", "____")
 #--------------------------------
 snippet = random.choice(list(code_snippets.values()))
 code = snippet["code"]
@@ -147,6 +147,7 @@ while True:
     col1 = st.code(code, language='c')
     text_input = st.text_input(label="Enter Code for Blank")
     submit_button = st.button("Submit")
+    replace_with_blank(code)
 
     if submit_button:
         answer = text_input
@@ -156,7 +157,7 @@ while True:
         else:
             st.write(f"Wrong {WRONG_EMOJI}: " + str(answer))
             st.write("Expected: ")
-            col2 = st.code(code, language='c')
+            col2 = st.code(code.replace("____", key), language='c')
             
         # restart 
         restart_button = st.button("Restart?")
