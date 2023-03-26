@@ -151,7 +151,7 @@ submit_button = st.button("Submit")
 if submit_button:
     answer = user_text_input
     
-    time.sleep(1)
+    sleep(1)
         
     if answer == key:
         st.write(f"Correct {CORRECT_EMOJI}: " + str(answer))
