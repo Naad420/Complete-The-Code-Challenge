@@ -2,7 +2,8 @@
 import random
 
 class Snippets():
-    def __init__(self):
+    
+    def fetch_random_snippet(self):
         code_snippets = {
             "snippet2": {
                 "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int [BLANK];\n ptr = #\n\n printf('The value of num is: %d', *ptr);\n\n return 0;\n}",
@@ -33,8 +34,6 @@ class Snippets():
                 "answer": "*ptr"
             }
         }
-    
-    def fetch_random_snippet(self):
         snippet = random.choice(list(code_snippets.values()))
         code = snippet["code"]
         key = snippet["answer"]
