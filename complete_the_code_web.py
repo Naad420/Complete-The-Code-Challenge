@@ -1,5 +1,6 @@
 import streamlit as st
 import random
+from time import sleep
 
 #-------------data--------------
 code_snippets = {
@@ -149,6 +150,8 @@ submit_button = st.button("Submit")
 
 if submit_button:
     answer = user_text_input
+    
+    time.sleep(1)
         
     if answer == key:
         st.write(f"Correct {CORRECT_EMOJI}: " + str(answer))
@@ -156,10 +159,3 @@ if submit_button:
         st.write(f"Wrong {WRONG_EMOJI}: " + str(answer))
         st.write("Expected: ")
         col2 = st.code(code.replace("____", key), language='c')
-            
-    # restart 
-    restart_button = st.button("Restart?")
-    if restart_button:
-        True
-    else: 
-        pass
