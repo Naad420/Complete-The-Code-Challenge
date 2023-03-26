@@ -32,6 +32,10 @@ code_snippets = {
         "answer": "*ptr"
     }
 }
+#-------------------------------
+snippet = random.choice(list(code_snippets.values()))
+code = snippet["code"]
+key = snippet["answer"]
 #-----------settings------------
 PAGE_TITLE = "</>Complete the Code</>"
 PAGE_ICON = ":fire:"
@@ -42,10 +46,6 @@ WRONG_EMOJI = ':joy:'
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=layout)
 st.title("MUJ IEEE CS: BATTLESHIP :collision:")
 st.title("</> Complete_the_code </>")
-#-------------------------------
-snippet = random.choice(list(code_snippets.values()))
-code = snippet["code"]
-key = snippet["answer"]
 #-------------------------------
 code = code.replace(key, "____", 1) # only replacing first occurance
 #-------------------------------
