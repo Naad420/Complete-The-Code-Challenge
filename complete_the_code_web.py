@@ -135,32 +135,35 @@ WRONG_EMOJI = ':joy:'
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=layout)
 st.title("MUJ IEEE CS: BATTLESHIP :collision:")
 st.title("</> Complete_the_code </>")
-#----------convenience----------
-def replace_with_blank(code):
-    code = code.replace("[BLANK]", "____")
-#--------------------------------
+#--------snippet_blanks---------
+for snippets in list(code_snippets.values()):
+    snippets["code"] = snippets["code"].replace("[BLANK]", "____")
+#-------------init---------------
 snippet = random.choice(list(code_snippets.values()))
 code = snippet["code"]
 key = snippet["answer"]
 #----------mainloop--------------
-while True:
-    col1 = st.code(code, language='c')
-    user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
-    submit_button = st.button("Submit")
-    replace_with_blank(code)
+col1 = st.code(code, language='c')
+user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
+submit_button = st.button("Submit")
 
-    if submit_button:
-        answer = str(user_text_input)
+col1 = st.code(code, language='c')
+user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
+submit_button = st.button("Submit")
+
+if submit_button:
+    answer = user_text_input
         
-        if answer == key:
-            st.write(f"Correct {CORRECT_EMOJI}: " + str(answer))
-        else:
-            st.write(f"Wrong {WRONG_EMOJI}: " + str(answer))
-            st.write("Expected: ")
-            col2 = st.code(code.replace("____", key), language='c')
+    if answer == key:
+        st.write(f"Correct {CORRECT_EMOJI}: " + str(answer))
+    else:
+        st.write(f"Wrong {WRONG_EMOJI}: " + str(answer))
+        st.write("Expected: ")
+        col2 = st.code(code.replace("____", key), language='c')
             
-        # restart 
-        restart_button = st.button("Restart?")
-        if restart_button:
-            True
-        else: break
+    # restart 
+    restart_button = st.button("Restart?")
+    if restart_button:
+        True
+    else: 
+        pass
