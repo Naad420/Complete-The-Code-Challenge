@@ -47,7 +47,7 @@ snippet = random.choice(list(code_snippets.values()))
 code = snippet["code"]
 key = snippet["answer"]
 #-------------------------------
-code.replace(key, "____", 1) # only replacing first occurance
+code = code.replace(key, "____", 1) # only replacing first occurance
 #-------------------------------
 col1 = st.code(code, language='c')
 user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
