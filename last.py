@@ -3,7 +3,8 @@ import random
 from code_snippets import Snippets
 
 
-code, key = Snippets()
+data = Snippets()
+code, key = data.fetch_random_snippet()
 #-----------settings------------
 PAGE_TITLE = "</>Complete the Code</>"
 PAGE_ICON = ":fire:"
