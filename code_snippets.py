@@ -35,7 +35,7 @@ class Snippets():
         }
     
     def fetch_random_snippet(self):
-        snippet = random.choice(list(self.code_snippets.values()))
+        snippet = random.choice(list(code_snippets.values()))
         code = snippet["code"]
         key = snippet["answer"]
         
