@@ -33,9 +33,11 @@ class Snippets():
                 "answer": "*ptr"
             }
         }
-        snippet = random.choice(list(code_snippets.values()))
+    
+    def fetch_random_snippet(self):
+        snippet = random.choice(list(self.code_snippets.values()))
         code = snippet["code"]
         key = snippet["answer"]
         
-        return code, key
+        return str(code), str(key)
         
