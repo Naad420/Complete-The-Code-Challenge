@@ -145,12 +145,12 @@ key = snippet["answer"]
 #----------mainloop--------------
 while True:
     col1 = st.code(code, language='c')
-    text_input = st.text_input(label="Enter Code for Blank")
+    user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
     submit_button = st.button("Submit")
     replace_with_blank(code)
 
     if submit_button:
-        answer = text_input
+        answer = str(user_text_input)
         
         if answer == key:
             st.write(f"Correct {CORRECT_EMOJI}: " + str(answer))
