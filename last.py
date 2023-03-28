@@ -24,11 +24,11 @@ submit_button = st.button("Submit")
 user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
 #-------------------------------
 if submit_button:
-    if user_text_input == key:
-        st.write(f"Correct {CORRECT_EMOJI}: " + str(user_text_input))
-    else:
+    if user_text_input != key:
         st.write(f"Wrong {WRONG_EMOJI}: " + str(user_text_input))
         st.write("Expected: " + key)
+    else:
+        st.write(f"Correct {CORRECT_EMOJI}: " + str(user_text_input))
 
 #     user_text_input = st.text_input(label="Enter Code for Blank", key="#t1", value=" ")
 
