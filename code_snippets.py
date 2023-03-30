@@ -81,10 +81,6 @@ class Snippets():
                 "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int *ptr[5];\n for (int i = 0; i < 5; i++) {\n ptr[i] = &arr[i];\n }\n printf('The sum of the elements in the array is: %d', *ptr[0] + *ptr[1] + *ptr[2] + *ptr[3] + *ptr[4]);\n return 0;\n}",
                 "answer": "*ptr[5]"
             },
-            "snippet20": {
-                "code": "#include <stdio.h>\n\nint main() {\n int num = 5;\n int *ptr = #\n printf('The value of num is: %d', *ptr);\n return 0;\n}",
-                "answer": "*ptr"
-            },
             "snippet21": {
                 "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int even_count;\n for (int i = 0; i < n; i++) {\n if (arr[i] % 2 == 0) {\n even_count++;\n }\n }\n printf('The number of even elements in the array is: %d', even_count);\n return 0;\n}",
                 "answer": "even_count"

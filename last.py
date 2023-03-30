@@ -28,19 +28,19 @@ if 'code' not in st.session_state:
 with st.form(key='my_form'):
     col3 = st.code(st.session_state.code, language="c")
 
-    user_text_input = st.text_input(label="Enter Code for Blank", value=' ')
+    user_text_input = st.text_input(label="Enter Code for Blank")
     submit_button = st.form_submit_button(label="Submit", disabled=False)
 
     if submit_button:
-        if user_text_input != st.session_state.answer:
+        if user_text_input == st.session_state.answer:
+            st.write(f"Correct {CORRECT_EMOJI}: " + str(user_text_input))
+        else:
             st.write(f"Wrong {WRONG_EMOJI}: " + str(user_text_input))
             st.write("Expected: " + st.session_state.answer)
-        else:
-            st.write(f"Correct {CORRECT_EMOJI}: " + str(user_text_input))
 
 col4, col5 = st.columns([1, 8])
 with col4:
-    st.markdown("<a href='https://www.instagram.com/ieee_csmuj/'>Instagram</a>",unsafe_allow_html=True)
+    st.markdown("<a href='https://www.instagram.com/ieee_csmuj/'>Instagram</a>", unsafe_allow_html=True)
 with col5:
     st.markdown("<a href='https://www.linkedin.com/company/ieee-cs-muj/mycompany/'>LinkedIn</a>", unsafe_allow_html=True)
 
