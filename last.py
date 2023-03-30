@@ -11,7 +11,7 @@ data = Snippets()
 code, key = data.fetch_random_snippet()
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=layout)
 
-col1, col2 = st.columns([1, 4])
+col1, col2 = st.columns([1, 7])
 with col1:
     st.image("1623940696853.jpeg", width=80)
 with col2:
