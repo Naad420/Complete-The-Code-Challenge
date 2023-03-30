@@ -35,8 +35,6 @@ import streamlit as st
 import random
 from code_snippets import Snippets
 
-
-
 data = Snippets()
 
 #-----------settings------------
@@ -67,4 +65,4 @@ if submit_button:
         print("Helo")
     else:
         st.write(f"Correct {CORRECT_EMOJI}: " + str(user_text_input))
-        print("Helo")
+        print("priyansh gay")
