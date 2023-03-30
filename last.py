@@ -9,8 +9,13 @@ WRONG_EMOJI = ':joy:'
 
 data = Snippets()
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout=layout)
-st.title("MUJ IEEE CS: BATTLESHIP :collision:")
-st.title('Complete the code')
+
+col1, col2 = st.columns([1, 4])
+with col1:
+    st.image("1623940696853.jpeg", width=80)
+with col2:
+    st.title("MUJ IEEE CS: BATTLESHIP :collision:")
+st.title('</>Complete the code</>')
 
 if 'code' not in st.session_state:
     data = Snippets()
@@ -22,7 +27,7 @@ if 'code' not in st.session_state:
 
 st.code(st.session_state.code, language="c")
 
-user_text_input = st.text_input(label="Enter Code for Blank", key="#t1")
+user_text_input = st.text_input(label="Enter Code for Blank", key="t1")
 submit_button = st.button("Submit")
 
 if submit_button:
@@ -34,3 +39,4 @@ if submit_button:
         st.write(f"Correct {CORRECT_EMOJI}: " + str(user_text_input))
         print("Helo")
 
+    restart = st.button("Restart")
