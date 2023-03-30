@@ -2,7 +2,7 @@
 import random
 
 class Snippets():
-    
+
     def fetch_random_snippet(self):
         code_snippets = {
             "snippet1": {
@@ -459,7 +459,7 @@ class Snippets():
             printf("Enter Base and Height: ");
             scanf("%f %f",&base,&height);
             float area = (base * height) / 2;
-        
+
             //Area with precision of 2 decimal places
             printf("Area of Triangle is %0.2f",area);
         }
@@ -470,6 +470,6 @@ class Snippets():
         snippet = random.choice(list(code_snippets.values()))
         code = snippet["code"]
         key = snippet["answer"]
-        
+
         return str(code), str(key)
-        
+
