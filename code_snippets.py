@@ -34,8 +34,8 @@ class Snippets():
                 "answer": "max"
             },
             "snippet8": {
-                "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int even_arr;\n for (int i = 0; i < n; i++) {\n even_arr[i] = arr[i] % 2 == 0 ? arr[i] : 0;\n }\n return 0;\n}",
-                "answer": "even_arr"
+                "code": "#include <stdio.h>\n\nint main() {\n int arr[] = {1, 2, 3, 4, 5};\n int n = sizeof(arr) / sizeof(arr[0]);\n int even_arr[n];\n for (int i = 0; i < n; i++) {\n even_arr[i] = arr[i] % 2 == 0 ? arr[i] : 0;\n }\n return 0;\n}",
+                "answer": "even_arr[n]"
             },
             "snippet9": {
                 "code": "#include <stdio.h>\n\nint main() {\n int num = 5;\n int *ptr = num;\n printf('The value of num is: %d', *ptr);\n return 0;\n}",
