@@ -54,7 +54,7 @@ class Snippets():
                 "answer": "reverse_arr"
             },
             "snippet13": {
-                "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int address = #\n printf('The address of num is: %p', address);\n return 0;\n}",
+                "code": "#include <stdio.h>\n\nint main() {\n int num = 10;\n int address = &num\n printf('The address of num is: %p', address);\n return 0;\n}",
                 "answer": "address"
             },
             "snippet14": {

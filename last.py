@@ -24,7 +24,6 @@ if 'code' not in st.session_state:
     st.session_state.code = code
     st.session_state.answer = key
 
-
 with st.form(key='my_form'):
     col3 = st.code(st.session_state.code, language="c")
 
@@ -43,5 +42,3 @@ with col4:
     st.markdown("<a href='https://www.instagram.com/ieee_csmuj/'>Instagram</a>", unsafe_allow_html=True)
 with col5:
     st.markdown("<a href='https://www.linkedin.com/company/ieee-cs-muj/mycompany/'>LinkedIn</a>", unsafe_allow_html=True)
-
-
